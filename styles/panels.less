@@ -20,8 +20,9 @@
 // Modal -------------------
 // Used on top of the editor, like the Command Palette.
 
-atom-panel.modal {
+atom-panel.modal, .overlay.from-top {
   border: 1px solid @overlay-border-color;
-  border-top: none;
-  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  box-shadow: 0 2px 20px 5px hsla(0,0%,0%,.3);
+  top: 250px;
+  border-radius: 5px;
 }
