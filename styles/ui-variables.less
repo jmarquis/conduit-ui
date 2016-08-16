@@ -10,9 +10,10 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
+@import "syntax-variables";
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
+@text-color:           #ACB6BF;
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
 @text-color-selected:  hsl(0,0%,100%);
@@ -30,11 +31,11 @@
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
+@app-background-color:       lighten(@base-background-color, 10%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: @syntax-background-color;
+@base-border-color:     darken(@base-background-color, 2%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -60,10 +61,10 @@
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
-@tab-bar-background-color:    @base-background-color;
-@tab-bar-border-color:        @base-border-color;
-@tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
+@tab-bar-background-color:    lighten(@base-background-color, 10%);
+@tab-bar-border-color:        darken(@base-background-color, 5%);
+@tab-background-color:        lighten(@base-background-color, 5%);
+@tab-background-color-active: @base-background-color;
 @tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
@@ -78,16 +79,18 @@
 
 // Sizes
 @font-size: 12px;
-@input-font-size: 14px;
+@input-font-size: 16px;
 
-@disclosure-arrow-size: 12px;
+@disclosure-arrow-size: 14px;
 
 @component-padding: 10px;
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
 
-@tab-height: 30px;
+@tooltip-background-color: @background-color-info;
+
+@tab-height: 50px;
 
 // Misc
 @component-border-radius: 2px;
