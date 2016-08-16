@@ -6,11 +6,13 @@
 
 
 .tooltip {
+
   .tooltip-inner {
     line-height: 1;
     padding: .75em;
     white-space: nowrap;
     max-width: none;
+    background-color: @tooltip-background-color;
   }
 
   .keystroke {
@@ -19,5 +21,30 @@
     border-radius: max(2px, @component-border-radius / 2);
     color: @text-color-selected;
     background: @background-color-selected;
+  }
+
+  &.top .tooltip-arrow {
+    border-top-color: @tooltip-background-color;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @tooltip-background-color;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @tooltip-background-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @tooltip-background-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @tooltip-background-color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tooltip-background-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @tooltip-background-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @tooltip-background-color;
   }
 }
