@@ -7,27 +7,49 @@
 
 .tab-bar {
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
 
   .tab {
     color: @text-color;
     height: @tab-height;
-    line-height: @tab-height;
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
+    border-bottom: 1px solid @tab-border-color;
     background-color: @tab-background-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &:hover {
+      background-color: lighten(@tab-background-color, 2%);
+    }
+
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
+      border-bottom-color: transparent;
     }
 
+    .close-icon {
+      position: static;
+      box-sizing: border-box;
+      display: block;
+      flex: none;
+      width: 12px;
+      height: 12px;
+
+      &::before {
+        display: block;
+        position: relative;
+        left: 5px;
+      }
+    }
 
     // Modified Icon (the blue circle) -------------------
     &.modified:not(:hover) .close-icon {
-      top: 50%;
-      right: @component-padding + 4px; // 4px -> half of icon size
-      margin-top: -3px;
-      border-color: @text-color-info;
+      background-color: @text-color-info;
+      border: 0;
     }
     &.modified:hover .close-icon {
       color: currentColor;
