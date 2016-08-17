@@ -14,6 +14,8 @@ A simple dark UI theme for Atom that automatically matches the current syntax th
 
 ## Screenshots
 
+Screenshots shown with file-icons, minimap, highlight-line and a few other random packages.
+
 Atom Dark syntax:
 ![Atom Dark](https://github.com/jmarquis/conduit-ui/raw/master/screenshots/one-dark.png)
 
