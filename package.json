@@ -1,7 +1,7 @@
 {
   "name": "conduit-ui",
   "theme": "ui",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A simple dark UI theme for Atom that matches syntax colors.",
   "keywords": [
     "ui",
