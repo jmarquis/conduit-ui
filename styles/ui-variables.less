@@ -31,11 +31,11 @@
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       lighten(@base-background-color, 10%);
+@app-background-color:       lighten(@base-background-color, 2%);
 
 // Base colors
 @base-background-color: @syntax-background-color;
-@base-border-color:     darken(@base-background-color, 2%);
+@base-border-color:     @base-background-color;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
