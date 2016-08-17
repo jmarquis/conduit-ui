@@ -13,21 +13,21 @@
 @import "syntax-variables";
 
 // Text Colors
-@text-color:           #ACB6BF;
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color:           fade(@syntax-text-color, 80%);
+@text-color-subtle:    fade(@text-color, 60%);
+@text-color-highlight: @syntax-text-color;
+@text-color-selected:  #fff;
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+@text-color-info:    hsl(208, saturation(@syntax-color-added), lightness(lighten(@syntax-color-added, 20%)));
+@text-color-success: @syntax-color-added;
+@text-color-warning: @syntax-color-modified;
+@text-color-error:   @syntax-color-removed;
 
 // Background colors
-@background-color-info:    hsl(208, 100%, 50%);
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
+@background-color-info:    darken(@text-color-info, 10%);
+@background-color-success: darken(@text-color-success, 10%);
+@background-color-warning: darken(@text-color-warning, 10%);
+@background-color-error:   darken(@text-color-error, 10%);
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
@@ -67,19 +67,19 @@
 @tab-background-color-active: @base-background-color;
 @tab-border-color:            @base-border-color;
 
-@tree-view-background-color: @base-background-color;
+@tree-view-background-color: lighten(@base-background-color, 5%);
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
 @ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
+@ui-site-color-2: purple; //hsl(160,  70%, 42%); // green
 @ui-site-color-3: hsl(32,   60%, 50%); // orange
 @ui-site-color-4: #D831B0;             // pink
 @ui-site-color-5: #EBDD5B;             // yellow
 
 // Sizes
 @font-size: 12px;
-@input-font-size: 16px;
+@input-font-size: 14px;
 
 @disclosure-arrow-size: 14px;
 
