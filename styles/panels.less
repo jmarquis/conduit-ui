@@ -25,4 +25,20 @@ atom-panel.modal, .overlay.from-top {
   box-shadow: 0 2px 20px 5px hsla(0,0%,0%,.3);
   top: 250px;
   border-radius: 5px;
+
+  atom-text-editor {
+    background: transparent !important;
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: fade(@base-background-color, 50%);
+    z-index: -1;
+    backface-visibility: hidden;
+  }
 }
