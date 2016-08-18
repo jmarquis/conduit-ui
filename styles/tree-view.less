@@ -14,7 +14,34 @@
   color: @text-color;
   background-color: @tree-view-background-color;
 
-  .list-item.selected {
-    color: @text-color-selected;
+  .name {
+    color: @text-color;
+  }
+
+  .list-item.selected,
+  .list-nested-item.selected {
+
+    > .name,
+    > .header > .name {
+      color: @text-color-selected;
+    }
+  }
+
+  .list-item.status-modified,
+  .list-nested-item.status-modified {
+
+    > .name,
+    > .header > .name {
+      color: @text-color-warning;
+    }
+  }
+
+  .list-item.status-added,
+  .list-nested-item.status-added {
+
+    > .name,
+    > .header > .name {
+      color: @text-color-success;
+    }
   }
 }
