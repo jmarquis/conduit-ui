@@ -1,6 +1,6 @@
 # Conduit
 
-A simple dark UI theme for Atom that automatically matches the current syntax theme. Only dark syntax themes supported currently.
+A simple dark UI theme for Atom that automatically matches the current syntax theme. Only dark syntax themes supported currently. Optimized for use with [seti-icons](https://atom.io/packages/seti-icons).
 
 ## Installation
 
