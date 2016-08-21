@@ -79,5 +79,19 @@
         visibility: hidden;
       }
     }
+
+    .title {
+
+      &::before {
+        position: static !important;
+        margin: 0 !important;
+        vertical-align: middle;
+      }
+    }
+
+    &[data-type="SettingsView"] .icon::before {
+      display: inline;
+      vertical-align: top;
+    }
   }
 }
