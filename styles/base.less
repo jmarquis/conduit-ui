@@ -14,22 +14,6 @@ body {
   background-color: @app-background-color;
 }
 
-atom-pane {
-  border-right: 1px solid @base-border-color;
-
-  &:last-child {
-    border-right: none;
-  }
-
-  atom-pane-axis.vertical > & {
-
-    & ~ atom-pane,
-    & ~ atom-pane-axis atom-pane {
-      border-top: 1px solid darken(@base-border-color, 5%);
-    }
-  }
-}
-
 atom-pane-container atom-pane-axis.vertical > atom-pane-resize-handle {
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
