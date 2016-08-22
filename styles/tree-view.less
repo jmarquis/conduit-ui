@@ -19,7 +19,31 @@ atom-workspace .entries.list-tree .file .icon::before {
   color: @text-color;
   background-color: @tree-view-background-color;
 
+  > .project-root {
+
+    &::before {
+      height: 40px;
+    }
+
+    > .header {
+      height: 40px;
+      line-height: 40px !important;
+
+      &::before {
+        left: 5px !important;
+      }
+    }
+
+    &.expanded > .header::before {
+      left: 4px !important;
+    }
+  }
+
   .name {
+    color: @text-color;
+  }
+
+  .list-item::before {
     color: @text-color;
   }
 
@@ -27,7 +51,8 @@ atom-workspace .entries.list-tree .file .icon::before {
   .list-nested-item.selected {
 
     > .name,
-    > .header > .name {
+    > .header > .name,
+    > .list-item::before {
       color: @text-color-selected;
     }
   }
